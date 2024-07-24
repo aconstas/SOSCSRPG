@@ -73,10 +73,13 @@ namespace Engine.Models
         }
         // using an ObservableCollection because it automatically handles all the notifications, UI will be updated automatically
         public ObservableCollection<GameItem> Inventory { get; set; }
+        public ObservableCollection<QuestStatus> Quests { get; set; }
 
+        // constructor
         public Player()
         {
             Inventory = new ObservableCollection<GameItem>();
+            Quests = new ObservableCollection<QuestStatus>();
         }
     }
 }
