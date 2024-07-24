@@ -17,11 +17,11 @@ namespace Engine.ViewModels
         { get { return _currentLocation; } 
             set { 
                 _currentLocation = value; 
-                OnPropertyChanged("CurrentLocation");
-                OnPropertyChanged("HasLocationToNorth");
-                OnPropertyChanged("HasLocationToEast");
-                OnPropertyChanged("HasLocationToSouth");
-                OnPropertyChanged("HasLocationToWest");
+                OnPropertyChanged(nameof(CurrentLocation));
+                OnPropertyChanged(nameof(HasLocationToNorth));
+                OnPropertyChanged(nameof(HasLocationToEast));
+                OnPropertyChanged(nameof(HasLocationToSouth));
+                OnPropertyChanged(nameof(HasLocationToWest));
             }
         }
 
