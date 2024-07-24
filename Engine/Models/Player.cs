@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Engine.Models
 {
-    // use INotifyPropertyChanged when one class wants to notify another class that a property has changed
-    public class Player : INotifyPropertyChanged
+    // Player inherits from BaseNotificationClass
+    public class Player : BaseNotificationClass
     {
         // backing variables
         private string _name;
@@ -69,11 +69,6 @@ namespace Engine.Models
                 _gold = value;
                 OnPropertyChanged(nameof(Gold));
             }
-        }
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
